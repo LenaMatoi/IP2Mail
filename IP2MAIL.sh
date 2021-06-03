@@ -5,7 +5,7 @@ EXT_IP_FILE="/home/lena/work/iphoy"
 timestamp=$( date +%T )
 curDate=$( date +"%d-%m-%y" )
 #dime cual es la IP publica
-CURRENT_IP=`wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'`
+CURRENT_IP=`wget -q -O - checkip.dyndns.org|sed -e 's/.*IP ACTUAL: //' -e 's/<.*$//'`
 
 #comprobamos si el archivo existe y se saca la IP que hay guardada
 if [ -f $EXT_IP_FILE ]; then
